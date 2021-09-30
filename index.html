@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution{
+      position:absolute;
+      top:95%;
+      left:30%;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;400&display=swap');    
+    body{
+      background:hsl(185, 75%, 39%);
+      position:relative;
+      height:100vh;
+      width:100vw;
+      overflow:hidden;
+      font-family: 'Kumbh Sans', sans-serif;
+    }
+
+    .circle{
+      position:absolute;
+      top:0;
+      left:0;
+    }
+
+    .top-circle{
+      transform:translateX(-50%)translateY(-50%)
+    }
+
+    .bottom-circle{
+      transform:translateY(25%)translateX(50%)
+
+    }
+
+    .card{
+      width:50%;
+      height:60%;
+      left:25%;
+      top:20%;
+      /* border:1px solid black; */
+      background:white;
+      position:relative;
+      min-height:400px;
+      min-width:325px;
+      border-radius:15px;
+      overflow:hidden;
+    }
+
+    .hero{
+      background:url("./images/bg-pattern-card.svg");
+      height:30%;
+      width:100%;
+    }
+
+    .flex{
+      display:flex;
+    }
+
+    .column{
+      flex-direction:column;
+    }
+
+    .center{
+      align-items:center;
+      justify-content: center;
+    }
+
+    .evenly{
+      justify-content: space-evenly;
+      align-items:bottom;
+    }
+
+.portrait{
+  position:absolute;
+  top:40px;
+  border-radius:50%;
+  /* left:45%;
+  top:10%; */
+}
+  
+  .info{
+     height:165px;
+  }
+
+
+  .fade{
+    opacity:.7;
+    font-weight:200;
+  }
+
+  .ml-10{
+    margin-left:10px;
+  
+  }
+  .bottom-row{
+    margin-top:15px;
+  }
+
+
+  @media screen and (max-width:500px){
+    .card{
+      left:15%;
+    }
+    .attribution{
+      left:20%;
+    }
+  }
+
+  </style>
+</head>
+<body>
+  <img class='top-circle circle' src="./images/bg-pattern-top.svg" alt="img"/>
+
+  <div class="card">
+    <div class="hero">
+    </div>
+
+  <div class="content-card">
+    <div class="info flex column center">
+      <img class='portrait' src="./images/image-victor.jpg" alt="img">
+      <h1>Victor Crest <span class='fade ml-10'>26</span> </h1>
+      <p> London </p>
+    </div>
+    <div class="bottom-row flex evenly">
+<div class="column">
+ <h3 class="strong"> 80K </h3>
+ <p> Followers </p>
+</div>
+<div class="column">
+<h3 class="strong"> 803K </h3>
+<p> Likes </p>
+</div>
+<div class="column">
+ <h3 class="strong"> 1.4K </h3>
+  <p>Photos </p>
+ </div>
+
+  </div>
+
+  </div>
+  </div>
+
+  <img class="bottom-circle circle" src="./images/bg-pattern-bottom.svg" alt="img"/>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
